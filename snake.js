@@ -89,4 +89,6 @@ function rect(x,y){
     var c=document.getElementById()
 }
 
+//background-image: url("image/537f897f97cc5.gif");
+
 

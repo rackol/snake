@@ -1,5 +1,9 @@
 body{
-background-color: darkseagreen;
 text-align: center;
-font-size: large;
+}
+#title{
+    text-align: center;
+    font-size: large;
+    font-family: Ayuthaya;
+    color: black;
 }
