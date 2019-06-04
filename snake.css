@@ -1,9 +1,16 @@
 body{
 text-align: center;
+background-image: url("image/giphy4.gif");
+color-fill: (175,100,220);
 }
 #title{
     text-align: center;
     font-size: large;
-    font-family: Ayuthaya;
-    color: black;
+fill(175,100,220);
+}
+#high{
+    fill(175,100,220);
+}
+#total{
+fill(175,100,220);
 }
