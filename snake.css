@@ -1,16 +1,22 @@
 body{
-text-align: center;
-background-image: url("image/giphy4.gif");
-color-fill: (175,100,220);
+    text-align: center;
+    background-image: url("image/flat,550x550,075,f.u3.jpg");
 }
 #title{
-    text-align: center;
-    font-size: large;
-fill(175,100,220);
+    color: white;
+    background-color: darkmagenta;
+    margin-left: 40%;
+    margin-right: 40%;
 }
 #high{
-    fill(175,100,220);
+    color: white;
+    background-color: darkmagenta;
+    margin-left: 40%;
+    margin-right: 40%;
 }
 #total{
-fill(175,100,220);
+    color: white;
+    margin-left: 40%;
+    margin-right: 40%;
+    background-color: darkmagenta;
 }
