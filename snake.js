@@ -1,4 +1,5 @@
-var high=0;
+var high=getData("hscore");
+var best=0;
 var snake;
 var scl=20;
 var food;
@@ -55,12 +56,17 @@ function Snake(){
         if(this.total>=1){
             this.tail[this.total-1]=createVector(this.x,this.y);
         }
-        document.getElementById("total").innerHTML="Current Score:"+snake.total;
-        document.getElementById("high").innerHTML="High Score: "+high;
-        if(high<=snake.total){
-            high=snake.total;
-        document.getElementById("high").innerHTML="High Score: "+high;
+        document.getElementById("total").innerHTML="Current Score: "+snake.total;
+        document.getElementById("best").innerHTML="Your Best Score: "+best;
+        if(best<=snake.total){
+            best=snake.total;
+            document.getElementById("best").innerHTML="Your Best Score: "+best;
+        }if(best>=high){
+            high=best;
+            setData(high,"hscore");
         }
+        document.getElementById("high").innerHTML="High Score: "+high;
+
         this.x=this.x+this.xspeed*scl;
         this.y=this.y+this.yspeed*scl;
 
@@ -110,4 +116,15 @@ function keyPressed() {
     } else if (keyCode === LEFT_ARROW) {
         snake.dir(-1, 0);
     }
+}
+
+function setData(value, name) {
+    var json = JSON.stringify(value);
+    localStorage.setItem(name, json);
+}
+
+function getData(name) {
+    var text = localStorage.getItem(name);
+    var obj = JSON.parse(text);
+    return obj;
 }
